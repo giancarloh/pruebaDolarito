@@ -1,0 +1,85 @@
+:root {
+    --primary-blue: #2C3E50;
+    --secondary-blue: #3498DB;
+    --light-blue: #ECF0F1;
+    --white: #ffffff;
+    --dark-bg: #0E0D12;
+    --dark-card: #24212B;
+    --dark-text: #F5F5F5;
+    --light-text: #E0E0E0;
+    --dark-blue: #4d94ff;
+    --button-green: #2ECC71;
+    --bcv-color: #2ECC71;
+    --avg-color: #3498DB;
+    --parallel-color: #E67E22;
+    --bcv-bg: #AED6F1;
+    --avg-bg: #ABEBC6;
+    --parallel-bg: #FAD7A0;
+    --text-dark: #2C3E50;
+    --text-secondary: #95A5A6;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* ... (mantener todo el CSS original igual) ... */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .rate-card {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+    .calculator-buttons {
+        flex-direction: column;
+    }
+    .calculator-result-container {
+        flex-direction: column;
+    }
+    .copy-button {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.8rem;
+        text-align: right;
+        padding-right: 15px;
+        margin-left: 60px;
+    }
+    .theme-switch-container {
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+    }
+    .theme-text {
+        font-size: 0.7rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolarito Online - Cotización del Dólar y Calculadora de Divisas</title>
+    <meta name="description" content="Consulta la cotización actualizada del dólar en Venezuela y utiliza nuestra calculadora de divisas para conversiones rápidas y precisas.">
+    <meta name="keywords" content="dólar Venezuela, calculadora de divisas, tipo de cambio, bolívares, dolarito, dólar oficial, dólar paralelo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dolarito.online">
+    <meta property="og:title" content="Dolarito Online - Cotización del Dólar en Venezuela">
+    <meta property="og:description" content="Consulta la cotización actualizada del dólar y realiza conversiones entre bolívares y dólares.">
+    <meta property="og:url" content="https://dolarito.online">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="theme-switch-container">
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+            <div class="theme-text">Modo Oscuro</div>
+        </div>
+        <h1>Dolarito Online</h1>
+    </header>
+    <div class="container">
+        <div class="rates-container">
+            <div class="rate-card">
+                <div class="rate-title">🏦 Dólar Oficial BCV</div>
+                <div class="rate-value" id="official-rate">Cargando...</div>
+            </div>
+            <div class="rate-card">
+                <div class="rate-title">📊 Dólar Promedio</div>
+                <div class="rate-value" id="average-rate">Cargando...</div>
+            </div>
+            <div class="rate-card">
+                <div class="rate-title">💹 Dólar Paralelo</div>
+                <div class="rate-value" id="parallel-rate">Cargando...</div>
+            </div>
+        </div>
+        <div class="update-time" id="update-time"></div>
+        
+        <div class="calculator">
+            <h2>Calculadora de Divisas</h2>
+            <div class="rate-buttons" style="margin-bottom: 15px;">
+                <label for="rate-select">Seleccione el tipo de tasa:</label>
+                <select id="rate-select" class="rate-select">
+                    <option value="official">Dólar Oficial BCV</option>
+                    <option value="average">Dólar Promedio</option>
+                    <option value="parallel">Dólar Paralelo</option>
+                    <option value="custom">Dólar Valor Personalizado</option>
+                </select>
+            </div>
+            <div id="custom-rate-input" style="display: none; margin-bottom: 15px;">
+                <label for="custom-rate-value">Valor personalizado (Bs):</label>
+                <input type="number" id="custom-rate-value" placeholder="Ingrese tasa personalizada">
+            </div>
+            <div class="calculator-input" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                <label for="amount-input">Monto:</label>
+                <input type="number" id="amount-input" placeholder="Ingrese el monto">
+            </div>
+            <div class="rate-buttons" style="margin-bottom: 15px;">
+                <label for="conversion-select">Seleccione el tipo de conversión:</label>
+                <select id="conversion-select" class="rate-select">
+                    <option value="bs-to-usd">De Bs a Dólares</option>
+                    <option value="usd-to-bs">De Dólares a Bs</option>
+                </select>
+            </div>
+            <div class="calculator-result-container">
+                <div class="calculator-result" id="result"></div>
+                <button class="copy-button" id="copy-result">
+                    <svg class="share-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                    </svg>
+                    Compartir
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; <span id="current-year"></span> Dolarito Online. Todos los derechos reservados.
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
